@@ -8,7 +8,7 @@ public class BaseMsEdge
 WebDriver driver;
 public void instilisebrow()
 {
-	System.setProperty("webdriver.edge.driver","C:\\Users\\user\\eclipse-workspace-2021-12\\TestAuto\\src\\main\\java\\ResourceFiles\\msedgedriver.exe");
+	System.setProperty("webdriver.edge.driver","C:\\Users\\user\\git\\NewTest\\TestAuto\\src\\main\\java\\ResourceFiles\\msedgedriver.exe");
 	driver=new EdgeDriver();
 	driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
 	driver.manage().window().maximize();

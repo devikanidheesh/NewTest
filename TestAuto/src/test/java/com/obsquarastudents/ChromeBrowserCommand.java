@@ -1,7 +1,8 @@
 package com.obsquarastudents;
 
 public class ChromeBrowserCommand extends BaseChrome
-{
+{ 
+
      public void chromeBrowserCommand()
       {
     	 String title=driver.getTitle();
@@ -15,11 +16,24 @@ public class ChromeBrowserCommand extends BaseChrome
     	 driver.navigate().forward();
     	 driver.navigate().refresh();
      }
+    public void testTitle()
+    	 {
+     
+     if(driver.getTitle().equalsIgnoreCase("Obsqura Testing"))
+		 {
+			 System.out.println("testing passed");
+	 }
+	 else
+	 {
+		 System.out.println("testing failed");
+	 }
+}
 	public static void main(String[] args)
-	{
+	{ 
 	ChromeBrowserCommand chromebrowsercommand=new ChromeBrowserCommand();
 	chromebrowsercommand.instilBrowser();
 	chromebrowsercommand.chromeBrowserCommand();
+	chromebrowsercommand.testTitle();
 	chromebrowsercommand.navigationCommands();
 	chromebrowsercommand.driverCloseOrQuit();
 	
