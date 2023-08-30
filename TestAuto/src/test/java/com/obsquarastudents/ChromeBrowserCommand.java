@@ -18,8 +18,7 @@ public class ChromeBrowserCommand extends BaseChrome
      }
     public void testTitle()
     	 {
-     
-     if(driver.getTitle().equalsIgnoreCase("Obsqura Testing"))
+     if(driver.getTitle().equals("Obsqura Testing"))
 		 {
 			 System.out.println("testing passed");
 	 }
