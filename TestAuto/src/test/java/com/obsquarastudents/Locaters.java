@@ -81,12 +81,24 @@ public void partialLinkList()
 public void locateByXpath()
 {
 	WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
+	
 	driver.navigate().to("https://selenium.obsqurazone.com/simple-form-demo.php");
 	WebElement enterValueField=driver.findElement(By.xpath("//input[@id='value-a']"));
 	
 	driver.navigate().to("https://selenium.obsqurazone.com/date-picker.php");
 	WebElement showDate=driver.findElement(By.xpath("//button[@id='button-one']"));
-}
+    }
+	public void locateExtraXpath()
+	{
+		
+	WebElement button=driver.findElement(By.xpath("//button[contains(@id,'one')]"));
+	
+	WebElement key=driver.findElement(By.xpath("//button[contains(@class,'btn-primary')and(@id='button-one')]"));
+	//WebElement input=driver.findElement(By.xpath("//input[contains(@class,'control')or(@id='single-input-field')]"));
+	
+	WebElement buttonstarts=driver.findElement(By.xpath("//button[starts-with(@id,'button-o')]"));
+	}
+	
 
 public static void main(String[] args) 
 	{
@@ -94,6 +106,7 @@ public static void main(String[] args)
 		locators.instilBrowser();
 		locators.locateByName();
 		locators.locateByXpath();
+		locators.locateExtraXpath();
 		locators.driverCloseOrQuit();
 			
 
