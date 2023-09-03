@@ -94,21 +94,25 @@ public void locateByXpath()
 	WebElement button=driver.findElement(By.xpath("//button[contains(@id,'one')]"));
 	
 	WebElement key=driver.findElement(By.xpath("//button[contains(@class,'btn-primary')and(@id='button-one')]"));
-	//WebElement input=driver.findElement(By.xpath("//input[contains(@class,'control')or(@id='single-input-field')]"));
+	WebElement input=driver.findElement(By.xpath("//input[contains(@class,'control11')or(@id='single-input-field')]"));
 	
 	WebElement buttonstarts=driver.findElement(By.xpath("//button[starts-with(@id,'button-o')]"));
+	driver.navigate().to("https://selenium.obsqurazone.com/simple-form-demo.php");
+	WebElement Testdemo=driver.findElement(By.xpath("//a[text()='Checkbox Demo']"));
 	}
-	
+	public void axesMethod()
+	{
+		WebElement parent=driver.findElement(By.xpath("//button[@id='button-one']//parent::form"));
+		WebElement child=driver.findElement(By.xpath("//div[@id='collapsibleNavbar']//child::ul"));
+	}
 
 public static void main(String[] args) 
 	{
 		Locaters locators=new Locaters();
 		locators.instilBrowser();
-		locators.locateByName();
 		locators.locateByXpath();
 		locators.locateExtraXpath();
 		locators.driverCloseOrQuit();
-			
 
 	}
 
