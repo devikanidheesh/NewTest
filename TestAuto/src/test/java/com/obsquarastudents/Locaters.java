@@ -104,6 +104,12 @@ public void locateByXpath()
 	{
 		WebElement parent=driver.findElement(By.xpath("//button[@id='button-one']//parent::form"));
 		WebElement child=driver.findElement(By.xpath("//div[@id='collapsibleNavbar']//child::ul"));
+		WebElement following=driver.findElement(By.xpath("//button[@id='button-one']//following::div[@id='message-two']"));
+		WebElement preceding=driver.findElement(By.xpath("//button[@id='button-one']//preceding::div[@id='collapsibleNavbar']"));
+		WebElement ancestor=driver.findElement(By.xpath("//button[@id='button-one']//ancestor::div[@class='card-body']"));
+		WebElement decendent=driver.findElement(By.xpath("//form[@method='POST']//descendant::button[@id='button-one']"));
+		WebElement foolowsib=driver.findElement(By.xpath("//button[@id='button-one']//following-sibling::div"));
+		
 	}
 
 public static void main(String[] args) 
