@@ -92,6 +92,7 @@ public class RadioButtonsandCheckBox extends BaseChrome
 	}
 	public void verifyShowSelectedButton()
 	{
+		String exceptedMessage="Radio button 'Male' is checked";
 		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
 		WebElement maleRadioButton=driver.findElement(By.xpath("//input[@id='inlineRadio1']"));
 		maleRadioButton.click();
@@ -99,7 +100,7 @@ public class RadioButtonsandCheckBox extends BaseChrome
 		showSelectedValueButton.click();
 		WebElement message=driver.findElement(By.xpath("//div[@id='message-one']"));
 		String actualMessage=message.getText();
-		String exceptedMessage="Radio button 'Male' is checked";
+		
 			if(exceptedMessage.equals(actualMessage))
 			{
 				System.out.println("Testing passed");
@@ -111,6 +112,7 @@ public class RadioButtonsandCheckBox extends BaseChrome
 	}
 	public void checkBox()
 	{
+		String exceptedmessage="Success - Check box is checked";
 		driver.navigate().to("https://selenium.obsqurazone.com/check-box-demo.php");
 		WebElement checkBoxButton=driver.findElement(By.xpath("//input[@id='gridCheck']"));
 		checkBoxButton.click();
@@ -118,7 +120,7 @@ public class RadioButtonsandCheckBox extends BaseChrome
 		boolean isCheckBoxselected=checkBoxButton.isSelected();
 		WebElement message=driver.findElement(By.xpath("//div[@id='message-one']"));
 		String actualmessage=message.getText();
-		String exceptedmessage="Success - Check box is checked";
+		
 		//System.out.println("expectedValue.trim()"+exceptedmessage.trim());
 		//System.out.println("actualValue.trim()"+actualmessage.trim());
 		if(actualmessage.equals(exceptedmessage))
