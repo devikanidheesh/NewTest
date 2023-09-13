@@ -25,14 +25,15 @@ public void findelements()
 	}
 }
 @Test
-	public void simpleformdemo() 
+	public void menuElements() 
 	{
-			String input="Simple Form Demo";
+			String input="Jquery Select2";
 			List<WebElement> menu=driver.findElements(By.xpath("//ul[contains(@class,'list-group')]//a"));
+			SoftAssert softassert=new SoftAssert();
 			for(WebElement value : menu) 
 			{
 			String actualresult=value.getText();
-			assertEquals(actualresult,input,"Text not found");
+			softassert.assertEquals(actualresult,input,"Text not found");
 			value.click();
 			return;
 	}

@@ -5,9 +5,9 @@
     <classes>
       <class name="com.obsquara.SeleniumTestNG.FindElementsSample">
         <methods>
-          <include name="driverCloseOrQuit"/>
           <include name="instilBrowser"/>
-          <include name="findelements"/>
+          <include name="driverCloseOrQuit"/>
+          <include name="menuElements"/>
         </methods>
       </class> <!-- com.obsquara.SeleniumTestNG.FindElementsSample -->
     </classes>
