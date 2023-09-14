@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquara.SeleniumTestNG.FindElementsSample">
+      <class name="com.obsquara.SeleniumTestNG.AnnotationScenario">
         <methods>
-          <include name="instilBrowser"/>
           <include name="driverCloseOrQuit"/>
-          <include name="menuElements"/>
+          <include name="instilBrowser"/>
+          <include name="testcase1"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.obsquara.SeleniumTestNG.FindElementsSample -->
+      </class> <!-- com.obsquara.SeleniumTestNG.AnnotationScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
