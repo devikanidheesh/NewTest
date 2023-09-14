@@ -5,7 +5,9 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -16,50 +18,49 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 @Test
-public class AnnotationScenario extends Base
+public class AnnotationScenario 
 {
-	public void testcase1()
-	{String input="Apple";
-	String actualMessage;
-	String expectedMessage="Your Message : "+input;
-	WebElement singleInputTextField=driver.findElement(By.xpath("//input[@id='single-input-field']"));
-	singleInputTextField.sendKeys(input);
-	WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
-	showMessageButton.click();
-	WebElement yourMessage=driver.findElement(By.xpath("//div[@id='message-one']"));
-	actualMessage=yourMessage.getText();assertEquals(expectedMessage,actualMessage,"Your message text is not"+ expectedMessage);	
-
-	}
-	@BeforeMethod
-	public void beforeMethod()
+	 WebDriver driver;
+	 @BeforeMethod
+	 public void instilBrowser()
+	 {
+		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\git\\NewTest\\SeleniumTestNG\\src\\main\\java\\ResourceFiles\\chromedriver.exe");
+		 driver=new ChromeDriver();
+		 driver.get("https://www.meesho.com/");
+		 driver.manage().window().maximize();
+	 }
+	 @AfterMethod
+	   public void driverQuit()
+	   {
+		 
+		   driver.quit();
+	   }
+	@Test
+	public void testCase1()
 	{
 		driver.navigate().to("https://selenium.obsqurazone.com/simple-form-demo.php");
-		WebElement simpleFormDemo=driver.findElement(By.xpath("//ul[contains(@class,'list-group-flush')]"));
+		WebElement  Showmessagebutton=driver.findElement(By.cssSelector("button#button-one"));
+		
 	}
-	@AfterMethod
-	public void afterMethod()
+	@BeforeSuite
+	public void beforeSuit()
 	{
-		driver.navigate().to("https://selenium.obsqurazone.com/drag-drop.php");
-		WebElement lastPage=driver.findElement(By.xpath("//div[@id='mylist']"));
-}
-	@Test
-	public void testcase2()
+		System.out.println("Testcase Started");
+	}
+	@AfterSuite
+	public void afterSuit()
 	{
-		driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
-		WebElement maleRadioButton=driver.findElement(By.xpath("//input[@id='inlineRadio11']"));
-		maleRadioButton.click();
-		boolean isMaleRadiobuttonSelected=maleRadioButton.isSelected();
-		assertTrue(isMaleRadiobuttonSelected,"MaleRadio Button is not Selected");	
+		System.out.println("Testcase passed");
 	}
 	@BeforeClass
 	public void beforeClass()
 	{
-		System.out.println("This will execute before the Class");
+		System.out.println("Before class");
 	}
 	@AfterClass
 	public void afterclass()
 	{
-		System.out.println("This will execute After the Class");
+		System.out.println("after class");
 }
 	@AfterTest
 	public void afterTest()
@@ -71,16 +72,8 @@ public class AnnotationScenario extends Base
 	{
 		System.out.println("Before Test");
 	}
-	@BeforeSuite
-	public void beforeSuit()
-	{
-		System.out.println("Before Suit");
-	}
-	@AfterSuite
-	public void afterSuit()
-	{
-		System.out.println("AfterSuit");
-	}
 	
 	
 }
+	
+	

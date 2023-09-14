@@ -5,11 +5,15 @@
     <classes>
       <class name="com.obsquara.SeleniumTestNG.AnnotationScenario">
         <methods>
-          <include name="driverCloseOrQuit"/>
+          <include name="afterTest"/>
+          <include name="afterclass"/>
           <include name="instilBrowser"/>
-          <include name="testcase1"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
+          <include name="beforeSuit"/>
+          <include name="afterSuit"/>
+          <include name="beforeTest"/>
+          <include name="beforeClass"/>
+          <include name="testCase1"/>
+          <include name="driverQuit"/>
         </methods>
       </class> <!-- com.obsquara.SeleniumTestNG.AnnotationScenario -->
     </classes>

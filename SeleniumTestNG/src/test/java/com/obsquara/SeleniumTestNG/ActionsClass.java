@@ -8,8 +8,7 @@ import org.testng.annotations.Test;
 public class ActionsClass extends Base
 {
 	@Test
-public void actions()
-{
+public void actions()		{
 	driver.navigate().to("https://selenium.obsqurazone.com/drag-drop.php");
 	WebElement dragable1=driver.findElement(By.xpath("//span[text()='Draggable n°1']"));
 	WebElement dragable2=driver.findElement(By.xpath("//span[text()='Draggable n°2']"));
@@ -18,7 +17,6 @@ public void actions()
 	action.doubleClick(dragable2).perform();
 	action.contextClick(dragable2).build().perform();
 	WebElement dropdown=driver.findElement(By.xpath("//div[@id='mydropzone']"));
-	action.dragAndDrop(dragable2, dropdown);
-	
+	action.dragAndDrop(dragable2, dropdown);	
 }
 }

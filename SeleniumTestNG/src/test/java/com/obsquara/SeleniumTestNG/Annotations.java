@@ -35,12 +35,12 @@ public void beforeMethod()
 	@BeforeClass
 	public void beforeClass()
 	{
-		System.out.println("Before Method");
+		System.out.println("Before class");
 	}
 	@AfterClass
 	public void afterclass()
 	{
-		System.out.println("after Method");
+		System.out.println("after class");
 }
 	@AfterTest
 	public void afterTest()
