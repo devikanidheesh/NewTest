@@ -27,17 +27,23 @@ public void tableList()
 	{
 		driver.navigate().to("https://selenium.obsqurazone.com/table-pagination.php");
 		String input="Ashton Cox";
-		List<WebElement>name=driver.findElements(By.xpath("//div[@id='dtBasicExample_wrapper']//td"));
+		List<WebElement>name=driver.findElements(By.xpath("//table[@id='dtBasicExample']"));
 		
 		for(WebElement userName:name)
 		{
 		String actualName=userName.getText();
-			if(input.equals(actualName))
+			if(actualName.contains(input))
 			{
-				System.out.println(actualName);
-				
-		break;
-		}	}
+				System.out.println("Required username found");
+				userName.click();
+				return;
+		    }	
+			else
+			{
+				System.out.println("Required username not found");
+				return;
+			}
+	   }
 
 }
 }
