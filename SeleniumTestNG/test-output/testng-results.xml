@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-14T22:48:07 IST" name="Default suite" finished-at="2023-09-14T22:48:18 IST" duration-ms="10680">
+  <suite started-at="2023-09-15T23:44:28 IST" name="Default suite" finished-at="2023-09-15T23:44:37 IST" duration-ms="9131">
     <groups>
     </groups>
-    <test started-at="2023-09-14T22:48:07 IST" name="Default test" finished-at="2023-09-14T22:48:18 IST" duration-ms="10680">
+    <test started-at="2023-09-15T23:44:28 IST" name="Default test" finished-at="2023-09-15T23:44:37 IST" duration-ms="9131">
       <class name="com.obsquara.SeleniumTestNG.WebTable">
-        <test-method is-config="true" signature="instilBrowser()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-14T22:48:07 IST" name="instilBrowser" finished-at="2023-09-14T22:48:12 IST" duration-ms="5213" status="PASS">
+        <test-method is-config="true" signature="instilBrowser()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-15T23:44:28 IST" name="instilBrowser" finished-at="2023-09-15T23:44:33 IST" duration-ms="4195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instilBrowser -->
-        <test-method signature="identifyName()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-14T22:48:12 IST" name="identifyName" finished-at="2023-09-14T22:48:13 IST" duration-ms="929" status="PASS">
+        <test-method signature="identifyName()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-15T23:44:33 IST" name="identifyName" finished-at="2023-09-15T23:44:33 IST" duration-ms="833" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- identifyName -->
-        <test-method is-config="true" signature="driverCloseOrQuit()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-14T22:48:13 IST" name="driverCloseOrQuit" finished-at="2023-09-14T22:48:13 IST" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="driverCloseOrQuit()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-15T23:44:33 IST" name="driverCloseOrQuit" finished-at="2023-09-15T23:44:34 IST" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverCloseOrQuit -->
-        <test-method is-config="true" signature="instilBrowser()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-14T22:48:13 IST" name="instilBrowser" finished-at="2023-09-14T22:48:16 IST" duration-ms="2924" status="PASS">
+        <test-method is-config="true" signature="instilBrowser()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-15T23:44:34 IST" name="instilBrowser" finished-at="2023-09-15T23:44:36 IST" duration-ms="2809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instilBrowser -->
-        <test-method signature="tableList()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-14T22:48:16 IST" name="tableList" finished-at="2023-09-14T22:48:17 IST" duration-ms="922" status="PASS">
+        <test-method signature="tableList()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-15T23:44:36 IST" name="tableList" finished-at="2023-09-15T23:44:37 IST" duration-ms="681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tableList -->
-        <test-method is-config="true" signature="driverCloseOrQuit()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-14T22:48:17 IST" name="driverCloseOrQuit" finished-at="2023-09-14T22:48:18 IST" duration-ms="240" status="PASS">
+        <test-method is-config="true" signature="driverCloseOrQuit()[pri:0, instance:com.obsquara.SeleniumTestNG.WebTable@49e53c76]" started-at="2023-09-15T23:44:37 IST" name="driverCloseOrQuit" finished-at="2023-09-15T23:44:37 IST" duration-ms="297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverCloseOrQuit -->

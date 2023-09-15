@@ -3,19 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquara.SeleniumTestNG.AnnotationScenario">
+      <class name="com.obsquara.SeleniumTestNG.WebTable">
         <methods>
-          <include name="afterTest"/>
-          <include name="afterclass"/>
           <include name="instilBrowser"/>
-          <include name="beforeSuit"/>
-          <include name="afterSuit"/>
-          <include name="beforeTest"/>
-          <include name="beforeClass"/>
-          <include name="testCase1"/>
-          <include name="driverQuit"/>
+          <include name="driverCloseOrQuit"/>
+          <include name="tableList"/>
         </methods>
-      </class> <!-- com.obsquara.SeleniumTestNG.AnnotationScenario -->
+      </class> <!-- com.obsquara.SeleniumTestNG.WebTable -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
