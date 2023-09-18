@@ -57,13 +57,19 @@ public class WebElementCommands extends BaseChrome
 	}
  }
  
+ 
  public void webElementcommands2()
  {
+
 	 WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
 	String showMessageButtonclassname=showMessageButton.getAttribute("class"); 
 	String showmessagename=showMessageButton.getAttribute("id");
 	String showmesagebuttontag=showMessageButton.getTagName();
 	String showmessagebackgroudcolor=showMessageButton.getCssValue("background-color");	
+	int xAxis=showMessageButton.getLocation().getX();
+	int yAxis=showMessageButton.getLocation().getY();
+	int height=showMessageButton.getSize().getHeight();
+	int widthShow=showMessageButton.getSize().getWidth();
 	
 	String actualResult;
 	String excpectedResult="Show Message";
@@ -142,7 +148,7 @@ public static void main(String[] args)
 	{
 		WebElementCommands webelementscommands=new WebElementCommands();
 		webelementscommands.instilBrowser();
-		webelementscommands.fontWeightShowmsgButton();
+		webelementscommands.webElementcommands2();
 		webelementscommands.driverCloseOrQuit();
 
 	}
