@@ -2,6 +2,7 @@ package com.obsquara.SeleniumTestNG;
 
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
 import org.openqa.selenium.By;
@@ -35,13 +36,13 @@ public class TestcasesObsquara extends Base
 		WebElement getTotalbutton=driver.findElement(By.xpath("//button[@id='button-two']"));
 		}
 	@Test
-	public void verifyShowButtontext()
+	public void verifyShowButtonAlignment()
 	{
 		WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
-		String exceptedmesg="Show Message buttons";
-		String actualmesg=showMessageButton.getText();
-		assertNotEquals(exceptedmesg,actualmesg,"The text is not equal");
-		
+		WebElement singleInputText=driver.findElement(By.xpath("//input[@id='single-input-field']"));
+		int height1=showMessageButton.getSize().getHeight();
+		int height2=singleInputText.getSize().getHeight();
+		assertEquals(height1, height2);
 	}
 
 }

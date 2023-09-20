@@ -7,8 +7,17 @@ import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertNull;
 import static org.testng.Assert.assertTrue;
 
+import java.time.Duration;
+import java.util.NoSuchElementException;
+import java.util.function.Function;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -23,6 +32,8 @@ public class Assertion extends Base
 		WebElement singleInputTextField=driver.findElement(By.xpath("//input[@id='single-input-field']"));
 		singleInputTextField.sendKeys(input);
 		WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(showMessageButton));
 		showMessageButton.click();
 		WebElement yourMessage=driver.findElement(By.xpath("//div[@id='message-one']"));
 		actualMessage=yourMessage.getText();
@@ -42,6 +53,11 @@ public void assertFalsRadiobuttonDisable()
 {
 	driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
 	WebElement femaleRadioButton=driver.findElement(By.xpath("//input[@id='inlineRadio21']"));
+	Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+	        .withTimeout(Duration.ofSeconds(30))
+	        .pollingEvery(Duration.ofSeconds(5))
+	        .ignoring(NoSuchElementException.class);
+	fluentWait.until(ExpectedConditions.elementToBeClickable(femaleRadioButton));
 	femaleRadioButton.click();
 	WebElement maleRadioButton=driver.findElement(By.xpath("//input[@id='inlineRadio11']"));
 	boolean maleradiobuttonselcted=maleRadioButton.isSelected();

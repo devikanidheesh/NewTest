@@ -50,7 +50,7 @@ public void popup()  {
     
 	@Test
                public void alertmet()     {
-				  String	input="Devika";
+				  String input="Devika";
             	  driver.navigate().to("https://selenium.obsqurazone.com/javascript-alert.php");
             	  WebElement alerMsg=driver.findElement(By.xpath("//button[contains(@class,'btn btn-success')]"));
             	  alerMsg.click();
