@@ -45,6 +45,8 @@ public void asserTrueRadioButtonM()
 	driver.navigate().to("https://selenium.obsqurazone.com/radio-button-demo.php");
 	WebElement maleRadioButton=driver.findElement(By.xpath("//input[@id='inlineRadio11']"));
 	maleRadioButton.click();
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	wait.until(ExpectedConditions.elementToBeClickable(maleRadioButton));
 	boolean isMaleRadiobuttonSelected=maleRadioButton.isSelected();
 	assertTrue(isMaleRadiobuttonSelected,"MaleRadio Button is not Selected");	
 }

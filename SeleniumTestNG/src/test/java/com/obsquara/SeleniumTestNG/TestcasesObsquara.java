@@ -5,8 +5,12 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestcasesObsquara extends Base
@@ -28,11 +32,21 @@ public class TestcasesObsquara extends Base
 		{
 		WebElement Showmessagebutton=driver.findElement(By.id("button-one"));
 		WebElement getTotalbutton=driver.findElement(By.id("button-two"));
+		Showmessagebutton.click();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(Showmessagebutton));
+		getTotalbutton.click();
+		WebDriverWait wait1 = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getTotalbutton));
+		
 		}
 	@Test
 		public void xpathTestcase()
 		{
 		WebElement showmsgbutton=driver.findElement(By.xpath("//button[@id='button-one']"));
+		showmsgbutton.click();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(showmsgbutton));
 		WebElement getTotalbutton=driver.findElement(By.xpath("//button[@id='button-two']"));
 		}
 	@Test
