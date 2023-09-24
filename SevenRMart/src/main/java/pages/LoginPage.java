@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.PageUtility;
+
+
+
 public class LoginPage {
 	public WebDriver driver;
 	public LoginPage(WebDriver driver)
@@ -38,5 +42,10 @@ public class LoginPage {
 	public String verifyGetTheAlertMessage()
 	{
 		return alert.getText();
+	}
+	public void sample()
+	{
+		PageUtility pageutility = new PageUtility();
+		pageutility.selectDropdownbyText(alert, "Red");
 	}
 }

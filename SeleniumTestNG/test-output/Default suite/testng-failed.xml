@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquara.SeleniumTestNG.Assertion">
+      <class name="com.obsquara.SeleniumTestNG.PopUp">
         <methods>
-          <include name="driverCloseOrQuit"/>
           <include name="instilBrowser"/>
-          <include name="assertFalsRadiobuttonDisable"/>
+          <include name="driverCloseOrQuit"/>
+          <include name="alertmet"/>
         </methods>
-      </class> <!-- com.obsquara.SeleniumTestNG.Assertion -->
+      </class> <!-- com.obsquara.SeleniumTestNG.PopUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

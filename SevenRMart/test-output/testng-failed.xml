@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquara.SevenRMart.testscript.SevenRMart">
+      <class name="com.obsquara.SevenRMart.testscript.ManageLocationText">
         <methods>
-          <include name="driverCloseOrQuit"/>
           <include name="instilBrowser"/>
-          <include name="verifyWrongUserandcorrectPassword"/>
+          <include name="driverCloseOrQuit"/>
+          <include name="verifyeditthedeleverychargeinmanagelocationpage"/>
         </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.SevenRMart -->
+      </class> <!-- com.obsquara.SevenRMart.testscript.ManageLocationText -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

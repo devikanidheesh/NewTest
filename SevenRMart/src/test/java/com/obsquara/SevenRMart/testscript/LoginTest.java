@@ -22,11 +22,11 @@ public class LoginTest extends Base {
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickSigninButton();
 		String actualresult=loginpage.verifyNavigateToAdminHomePage();
-		assertEquals(excpctedresult,actualresult,"login with wrong UserName and Password");
+		assertEquals(excpctedresult,actualresult,"Unable to login with correct UserName and Password");
 		
 	}
 	@Test
-	public void verifyUserIsAbleTOLoginWithWrongUserNameAndCorrectPassword()
+	public void verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword()
 	{
 		String userName="user";
 		String password="admin";
@@ -36,7 +36,7 @@ public class LoginTest extends Base {
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickSigninButton();
 		String actualResult=loginpage.verifyGetTheAlertMessage();
-		assertEquals(exceptedResult,actualResult,"verify Wrong username and correct password  is failed ");	
+		assertEquals(exceptedResult,actualResult,"Able to login with Wrong username and correct password");	
 		
 		
 	}
@@ -53,7 +53,7 @@ public class LoginTest extends Base {
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickSigninButton();
 		String actualresult=loginpage.verifyGetTheAlertMessage();
-		assertEquals(excpctedresult,actualresult,"verify correct username and wrong password  is failed ");
+		assertEquals(excpctedresult,actualresult,"Able to login with correct username and wrong password ");
 	}
 	@Test
 	public void verifyInvalidUserNameAndInvalidPassword()
@@ -68,7 +68,7 @@ public class LoginTest extends Base {
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickSigninButton();
 		String actualresult=loginpage.verifyGetTheAlertMessage();
-		assertEquals(excpctedresult,actualresult,"verify Invalid username and Invalid password  is failed ");
+		assertEquals(excpctedresult,actualresult,"Able to login with Wrong username and wrong password");
 	}
 
 }
