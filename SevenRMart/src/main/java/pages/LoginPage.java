@@ -11,33 +11,43 @@ import Utilities.PageUtility;
 
 public class LoginPage {
 	public WebDriver driver;
+	PageUtility pageutility = new PageUtility();
+ 
 	public LoginPage(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		}
-	@FindBy(xpath="//input[@name='username']") WebElement usernameField;
-	@FindBy(xpath="//input[@name='password']") WebElement passwordField;
-	@FindBy(xpath="//button[text()='Sign In']") WebElement signInButton;
-	@FindBy(xpath="//a[@data-toggle='dropdown']") WebElement admin;
-	@FindBy(xpath="//i[contains(@class,'icon fas fa-ban')]//parent::h5") WebElement alert;
+	@FindBy(xpath="//input[@name='username']") 
+	private WebElement usernameField;
+	@FindBy(xpath="//input[@name='password']")
+	private WebElement passwordField;
+	@FindBy(xpath="//button[text()='Sign In']") 
+	private WebElement signInButton;
+	@FindBy(xpath="//li[contains(@class,'breadcrumb-item active')]")
+	private WebElement dashBoard;
+	@FindBy(xpath="//i[contains(@class,'icon fas fa-ban')]//parent::h5") 
+	private WebElement alert;
 	
-	public void enterUsernameOnUserNameField(String userName)
+	public  LoginPage enterUsernameOnUserNameField(String userName)
 	{
 		usernameField.sendKeys(userName);
+		return this;
 	}
-	public void enterPasswordOnPasswordField(String password)
+	public LoginPage enterPasswordOnPasswordField(String password)
 	{
 		passwordField.sendKeys(password);
+		return this;
 	}
-	public void clickSigninButton()
+	public LoginPage clickSigninButton()
 	{
 		signInButton.click();
+		return this;
 	}
-	public String verifyNavigateToAdminHomePage()
+	public String verifyNavigateToDashBoardHomePage()
 	{
 		
-		return admin.getText();
+		return dashBoard.getText();
 	}
 	public String verifyGetTheAlertMessage()
 	{
@@ -45,7 +55,7 @@ public class LoginPage {
 	}
 	public void sample()
 	{
-		PageUtility pageutility = new PageUtility();
+		pageutility = new PageUtility();
 		pageutility.selectDropdownbyText(alert, "Red");
 	}
 }

@@ -4,50 +4,77 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 
 import Utilities.PageUtility;
+import Utilities.WaitUtility;
 
 public class AdminUserspage {
 	public WebDriver driver;
-	public AdminUserspage(WebDriver driver)
-	{
+	public AdminUserspage(WebDriver driver){
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-		}
-	@FindBy(xpath="//p[text()='Admin Users']//parent::div") WebElement adminuser;
-	@FindBy(xpath="//i[contains(@class,'fas fa-arrow-circle-right')]//parent::a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']") WebElement moreinfo;
-	@FindBy(xpath="//a[@onclick='click_button(2)']") WebElement search;
-	@FindBy(xpath="//input[@id='un']") WebElement usernameadminuser;
-	@FindBy(xpath="//select[@id='ut']") WebElement usertypeadminuser;
-	@FindBy(xpath="//button[@name='Search']") WebElement searchbutton;
-	@FindBy(xpath="//td[text()='junu2023/09/22 19:37:49']") WebElement adminListUsername;
-	public String navigateToAdminUsersPages()
-	{
+	}
+	@FindBy(xpath="//p[text()='Admin Users']//parent::div")
+	private WebElement adminuser;
+	@FindBy(xpath="//i[contains(@class,'fas fa-arrow-circle-right')]//parent::a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']") 
+	private WebElement moreinfo;
+	@FindBy(xpath="//a[@onclick='click_button(1)']") 
+	private WebElement newbutton;
+	@FindBy(xpath="//input[@id='username']") 
+	private WebElement usernameadminuser;
+	@FindBy(xpath="//input[@id='password']") 
+	private WebElement passwordadminuser;
+	@FindBy(xpath="//select[@id='user_type']") 
+	private WebElement usertypeadminuser;
+	@FindBy(xpath="//button[contains(@class,'btn btn-block-sm btn-danger')and(@name='Create')]") 
+	private WebElement savebutton;
+	@FindBy(xpath="//i[contains(@class,'icon fas fa-check')]//parent::h5") 
+	private WebElement alert;
+	public String navigateToAdminUsersPages(){
 		return adminuser.getText();
 	}
-	public void clicktoadminuserpage()
-	{
+	public AdminUserspage clicktoadminuserpage(){
 		moreinfo.click();
+		return this;
 	}
-	public void searchButton()
+	public AdminUserspage clicknewbutton()
 	{
-		search.click();
+		newbutton.click();
+		return this;
 	}
-	public void enterusernametoadminuserfield(String username)
-	{
+	public AdminUserspage enterusernametoadminuserfield(String username){
 		usernameadminuser.sendKeys(username);
+		return this;
 	}
-	public void enterusertypeinadminuserpage()
-	{
-		PageUtility pageutility = new PageUtility();
-		pageutility.selectDropdownbyText(usertypeadminuser, "Admin");
-}
-	public void submitSearchbutton()
-	{
-		searchbutton.click();
+	public AdminUserspage enterthepasswordtoadminuserfield(String passwordd){
+		passwordadminuser.sendKeys(passwordd);
+		return this;
 	}
-	public String adminusersusername()
+	public AdminUserspage selecttheusertype()
 	{
-		return adminListUsername.getText();
+		usertypeadminuser.click();
+		return this;
 	}
+	public AdminUserspage enterusertypeinadminuserpage(){
+		PageUtility pageutility=new PageUtility();
+		pageutility.selectDropdownbyText(usertypeadminuser, "Staff");
+		usertypeadminuser.click();
+		return this;
+	}
+	
+	public AdminUserspage clicktheSavebutton()
+	{
+		savebutton.click();
+		return this;
+	}
+	public String alertSuccesfullymessage()
+	{
+		return alert.getText();
+		
+	}
+	
+	
+	
 }

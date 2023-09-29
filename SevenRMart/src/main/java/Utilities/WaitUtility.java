@@ -17,10 +17,15 @@ public class WaitUtility {
 		public static final long PAGE_LOAD_WAIT = 20;
 		public static final long EXPLICIT_WAIT = 50;
 		public static final long FLUENT_WAIT=30;
-		public static final long TIME_OUT_WAIT=15;
+		public static final long POLL_WAIT=15;
+		
+		public void implicitWaits(WebDriver driver)
+		{
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
+		}
 
 		public void waitForElement(WebDriver driver, WebElement target) {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(IMPLICIT_WAIT));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 			wait.until(ExpectedConditions.visibilityOf(target));
 		}
 
@@ -28,8 +33,44 @@ public class WaitUtility {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 			wait.until(ExpectedConditions.visibilityOfElementLocated(target));
 		}
-		public void  waitForElements(WebDriver driver,  WebElement timeout) {
+		public void waitForElementToBeClickable(WebDriver driver,By locator){
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+			wait.until(ExpectedConditions.elementToBeClickable(locator));
+			
+		}
+		public void waitForElementToBeClickable(WebDriver driver,WebElement target ){
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+			wait.until(ExpectedConditions.elementToBeClickable(target));
+			
+		}
+		public void waitForElementAlertIsPresent(WebDriver driver,WebElement target ){
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
+			wait.until(ExpectedConditions.alertIsPresent());	
+		}
+		public void  fluentwaitForVisibility(WebDriver driver,  WebElement timeout) {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(FLUENT_WAIT));	
 			wait.until(ExpectedConditions.visibilityOf( timeout));
 		}
+		public void fluentWaitForVisibilityofallElement(WebDriver driver,WebElement target)
+		{
+		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
+		        .withTimeout(Duration.ofSeconds(FLUENT_WAIT))
+		        .pollingEvery(Duration.ofSeconds(POLL_WAIT))
+		        .ignoring(NoSuchElementException.class);
+		fluentWait.until(ExpectedConditions.visibilityOfAllElements(target));
+	
+		}
+		public void  fluentwaitForAlertIsPresent(WebDriver driver,  WebElement target) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(FLUENT_WAIT));
+			wait.until(ExpectedConditions.alertIsPresent());
+		}
+		public void  fluentwaitelementtoBeClicked(WebDriver driver,  WebElement target) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(FLUENT_WAIT));	
+			wait.until(ExpectedConditions.elementToBeClickable(target));
+		}
+		public void  fluentwaitelementtoBeClickedlocator(WebDriver driver,  WebElement locator) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(FLUENT_WAIT));	
+			wait.until(ExpectedConditions.elementToBeClickable(locator));
+		}
+		
 }

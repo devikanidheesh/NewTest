@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import Utilities.ExcelUtility;
 import pages.LoginPage;
 
 public class LoginTest extends Base {
@@ -14,29 +15,27 @@ public class LoginTest extends Base {
 	@Test
 	public void verifyUserIsAbleToLoginWithCorrectUserNameAndPassword()
 	{
-		String userName="admin";
-		String password="admin";
-		String excpctedresult="Admin";
+		String userName=ExcelUtility.getString(1, 0, "LoginPage");
+		String password=ExcelUtility.getString(1, 1, "LoginPage");
+		String excpctedLogin=ExcelUtility.getString(1, 4, "LoginPage");
 		loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(userName);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickSigninButton();
-		String actualresult=loginpage.verifyNavigateToAdminHomePage();
-		assertEquals(excpctedresult,actualresult,"Unable to login with correct UserName and Password");
+		loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
+		String actualLogin=loginpage.verifyNavigateToDashBoardHomePage();
+		assertEquals(excpctedLogin,actualLogin,"Unable to login with correct UserName and Password");
 		
 	}
 	@Test
 	public void verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword()
 	{
-		String userName="user";
-		String password="admin";
-		String exceptedResult="Alert!";
+		String userName=ExcelUtility.getString(1, 2, "LoginPage");
+		String password=ExcelUtility.getString(1, 1, "LoginPage");
+		String exceptedAlert=ExcelUtility.getString(1, 5, "LoginPage");
 		loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUserNameField(userName);
 		loginpage.enterPasswordOnPasswordField(password);
 		loginpage.clickSigninButton();
-		String actualResult=loginpage.verifyGetTheAlertMessage();
-		assertEquals(exceptedResult,actualResult,"Able to login with Wrong username and correct password");	
+		String actualAlert=loginpage.verifyGetTheAlertMessage();
+		assertEquals(exceptedAlert,actualAlert,"Able to login with Wrong username and correct password");	
 		
 		
 	}
@@ -45,9 +44,9 @@ public class LoginTest extends Base {
 
 	{
 		
-		String userName="admin";
-		String password="password";
-		String excpctedresult="Alert!";
+		String userName=ExcelUtility.getString(1, 0, "LoginPage");
+		String password=ExcelUtility.getString(1, 3, "LoginPage");
+		String excpctedresult=ExcelUtility.getString(1, 5, "LoginPage");
 		loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUserNameField(userName);
 		loginpage.enterPasswordOnPasswordField(password);
@@ -60,9 +59,9 @@ public class LoginTest extends Base {
 
 	{
 		
-		String userName="user";
-		String password="password";
-		String excpctedresult="Alert!";
+		String userName=ExcelUtility.getString(1, 2, "LoginPage");
+		String password=ExcelUtility.getString(1, 3, "LoginPage");
+		String excpctedresult=ExcelUtility.getString(1, 5, "LoginPage");
 		loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUserNameField(userName);
 		loginpage.enterPasswordOnPasswordField(password);

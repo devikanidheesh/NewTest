@@ -1,36 +1,23 @@
 package com.obsquara.SevenRMart.testscript;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
+import Utilities.ExcelUtility;
 import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.Test;
-
 import pages.LoginPage;
 import pages.LogoutPage;
 
 public class LogoutTest extends Base{
 	@Test
-	public void verifyTheAdminLogout()
-	{
-		String userName="admin";
-		String password="admin";
-		String elementexcepcted="Remember Me";
+	public void verifyTheAdminLogout()  {
+	String userName=ExcelUtility.getString(1, 0, "LoginPage");
+	String password=ExcelUtility.getString(1, 1, "LoginPage");
+	String elementexcepctedLogout=ExcelUtility.getString(1, 0, "LogOutPage");
 	LoginPage loginpage=new LoginPage(driver);
 	LogoutPage logoutpage=new LogoutPage(driver);
-	loginpage.enterUsernameOnUserNameField(userName);
-	loginpage.enterPasswordOnPasswordField(password);
-	loginpage.clickSigninButton();
-	loginpage.verifyNavigateToAdminHomePage();
-	logoutpage.AdminPage();
-	logoutpage.waitExplicit();
-	logoutpage.adminLogout();
-	String elementActual=logoutpage.verifyGettheloginpage();
-	assertEquals(elementexcepcted,elementActual,"Unable to Admin logout ");
-	
-
-	
-
-}
+	loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
+	loginpage.verifyNavigateToDashBoardHomePage();
+	logoutpage.AdminPage().clickOnLogoutButton().adminLogout();
+	String elementActualLogOut=logoutpage.verifyGettheloginpage();
+	assertEquals(elementexcepctedLogout,elementActualLogOut,"Unable to Admin logout ");
+		}
 }

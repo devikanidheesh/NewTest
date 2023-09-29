@@ -2,5 +2,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.obsquara.SevenRMart.testscript.LoginTest">
+	<methods>
+<include name="verifyUserIsAbleToLoginWithCorrectUserNameAndPassword"></include>
+<include name="verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword"></include>
+</methods>
+      </class>
+      <class name="com.obsquara.SevenRMart.testscript.AdminUsersTest">
+<methods><exclude name="verifyUserCreatedSuccessfullyUserDetailsinAdminUserPage"></exclude>
+</methods>
+      </class>
+      
+    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
