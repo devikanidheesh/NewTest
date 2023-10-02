@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 public class Base {
 	WebDriver driver;
 	 @BeforeMethod
-	 public void instilBrowser()
+	 public void intializeBrowser()
 	 {
 		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\eclipse-workspace-2021-12\\SevenRMart\\src\\main\\java\\ResourceFiles\\chromedriver.exe");
 		 driver=new ChromeDriver();

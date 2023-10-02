@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquara.SevenRMart.testscript.ManagerSliderTest">
+      <class name="com.obsquara.SevenRMart.testscript.ManageOfferCodeTest">
         <methods>
-          <include name="entersliderinformationinmanagersliderpage"/>
-          <include name="instilBrowser"/>
+          <include name="VerifyUserAbletoDeleteOfferCode"/>
           <include name="driverCloseOrQuit"/>
+          <include name="intializeBrowser"/>
         </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.ManagerSliderTest -->
+      </class> <!-- com.obsquara.SevenRMart.testscript.ManageOfferCodeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -55,6 +55,10 @@ public class PageUtility {
 		 Actions actions = new Actions(driver);
 		 actions.moveToElement(dragableItem);
 	 }
+	 public void singleClickweblist(List<WebElement> list,WebDriver driver){
+		 Actions actions = new Actions(driver);
+		 actions.moveToElement((WebElement) list);
+	 }
 	 public void doubleClick(WebElement target,WebDriver driver){
 		 Actions actions = new Actions(driver);
 		 actions.doubleClick(target);
@@ -71,6 +75,10 @@ public class PageUtility {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();" ,element); 
 	}
+	 public void clickusingjavascriptExecuterss(WebDriver driver, List<WebElement> element){
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("arguments[0].click();" ,element); 
+		}
 	public void scrollByUsingJavascriptExecuter(WebDriver driver, WebElement element){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,800)"); 
@@ -79,12 +87,20 @@ public class PageUtility {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].value=text;",element);
 	}
+	public void sendInputUsingJavaScripte(WebDriver driver, List<WebElement> Elements){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].value=text;",Elements);
+	}
 	 public void alertAccept(WebDriver driver,WebElement element){
 		 element.click();
 		 driver.switchTo().alert().accept();
 	 }
 	 public void alertDismis(WebDriver driver,WebElement element){
 		 element.click();
+		 driver.switchTo().alert().dismiss();
+	 }
+	 public void alertDismisokcancelWeblist(WebDriver driver,List<WebElement> list){
+		 ((WebElement) list).click();
 		 driver.switchTo().alert().dismiss();
 	 }
 	 public void alertPromt(WebElement element,WebDriver driver,String text) {

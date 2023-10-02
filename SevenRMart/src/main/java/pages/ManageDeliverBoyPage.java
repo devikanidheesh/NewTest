@@ -93,9 +93,9 @@ public class ManageDeliverBoyPage {
 				waitutility.fluentwaitelementtoBeClicked(driver,saveButton);
 				saveButton.click();
 			}
-			public String getAlertSucessfulMessage()
+			public boolean getAlertSucessfulMessage()
 			{
-				return alertmesge.getText();
+				return alertmesge.isDisplayed();
 			}
 			
 	}

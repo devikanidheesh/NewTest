@@ -25,18 +25,17 @@ public class ManageSliderPage {
 	private WebElement newButton;
 	@FindBy(xpath="//input[@id='main_img']")
 	private WebElement chooseImage;
-	@FindBy(xpath="//div[@id='imagePreview']")
-	private WebElement imageupload;
-	
+	@FindBy(xpath="//input[@id='link']")
+	private WebElement linkText;
+	@FindBy(xpath="//button[text()='Save']")
+	private WebElement savebutton;
+	@FindBy(xpath="//h5[text()=' Alert!']//parent::div")
+	private WebElement alert;
 	
 	public ManageSliderPage clicktomanagelocation()
 	{
 		manageSlider.click();
 		return this;
-	}
-	public String getTextNew()
-	{
-		return newButton.getText();
 	}
 	public ManageSliderPage clickNewButton()
 	{
@@ -44,21 +43,27 @@ public class ManageSliderPage {
 		pageutility.clickusingjavascriptExecuter(driver,newButton);
 		return this;
 	}
-	public String getTextinchooseimage()
-	{
-		return chooseImage.getText();
-	}
-	public ManageSliderPage clickChooseImageButton()
-	{
-		chooseImage.click();
-		return this;
-	}
-	public void imagepathSelected(WebElement element,String path) 
+
+	public ManageSliderPage imageUpload() 
 	{
 		FileUploadUtility fileuploadutility=new FileUploadUtility();
-		//fileuploadutility.activateFileUploadUsingSendKeys(imageupload, "src/main/java/ResourceFiles/flower.jpg");
-		fileuploadutility.activateFileuploadUsingRobertClass(imageupload, path);
+		fileuploadutility.activateFileUploadUsingSendKeys(chooseImage,GeneralUtility.IMAGEFILETHATUPLOADMANAGESILDERPAGE );
+		return this;
+	}
+	public ManageSliderPage enterTheLinkinLInkField(String link)
+	{
+		linkText.sendKeys(link);
+		return this;
+	}
+	public ManageSliderPage clicktoSaveButton() {
+		PageUtility pageutility=new PageUtility();
+		pageutility.clickusingjavascriptExecuter(driver, savebutton);
+		return this;	
+	}
+	public boolean  getTheAlertMessagetoSuceesfully()
+	{
 		
+		return alert.isDisplayed();
 	}
 	
 	

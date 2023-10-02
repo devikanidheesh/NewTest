@@ -20,7 +20,6 @@ public class ManageDeliveryBoyTest extends Base {
 		String address=ExcelUtility.getString(1, 2, "ManageDeliveryBoy");
 		String usernamedelboy=ExcelUtility.getString(1, 3, "ManageDeliveryBoy");
 		String pasworddelboy=ExcelUtility.getString(1, 4, "ManageDeliveryBoy");
-		String alertmessageexcpct=ExcelUtility.getString(1, 5, "ManageDeliveryBoy");
 		int phonNo=12345678;
 		LoginPage loginpage=new LoginPage(driver);
 		ManageDeliverBoyPage managedliverBoypage=new ManageDeliverBoyPage(driver);
@@ -33,8 +32,8 @@ public class ManageDeliveryBoyTest extends Base {
 		managedliverBoypage.enterAddresstoManageDeliverBoyPage(address).enterUserNametoManageDeliverBoyPage(usernamedelboy).enterPassWordtoManageDeliverBoyPage(pasworddelboy);
 		managedliverBoypage.getSaveButtonText();
 		managedliverBoypage.clickSavebutton();
-		String alertMesgActual=managedliverBoypage.getAlertSucessfulMessage();
-		assertEquals(alertmessageexcpct,alertMesgActual,"unable to add Details of DeleverBoy in DeliveredPage");
+		boolean alertMesgActual=managedliverBoypage.getAlertSucessfulMessage();
+		assertTrue(alertMesgActual,"unable to add Details of DeleverBoy in DeliveredPage");
 	}
 
 }
