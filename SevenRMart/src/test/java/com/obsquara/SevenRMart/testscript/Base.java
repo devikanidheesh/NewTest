@@ -19,7 +19,7 @@ public class Base {
 		 driver.manage().window().maximize();
 	 }
 	 @AfterMethod
-	   public void driverCloseOrQuit()
+	   public void driverQuit()
 	   {
 		  
 		   driver.quit();

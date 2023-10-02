@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquara.SevenRMart.testscript.ManageOfferCodeTest">
+      <class name="com.obsquara.SevenRMart.testscript.ManageExpenseTest">
         <methods>
-          <include name="VerifyUserAbletoDeleteOfferCode"/>
+          <include name="VerifytheAddnewmanageexpense"/>
           <include name="driverCloseOrQuit"/>
           <include name="intializeBrowser"/>
         </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.ManageOfferCodeTest -->
+      </class> <!-- com.obsquara.SevenRMart.testscript.ManageExpenseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

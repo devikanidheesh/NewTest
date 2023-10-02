@@ -14,7 +14,7 @@ public class ManageExpenseTest extends Base {
 	{
 		String userName=ExcelUtility.getString(1, 0, "LoginPage");
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
-		String dateTime="01/11/2022";
+		String dateTime="01-11-2022";
 		int amount=100;
 		LoginPage loginpage=new LoginPage(driver);
 		ManageExpencePage manageexpencepage=new ManageExpencePage(driver);
