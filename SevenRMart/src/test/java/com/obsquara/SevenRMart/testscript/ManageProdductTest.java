@@ -17,10 +17,10 @@ public class ManageProdductTest extends Base {
 	String title=ExcelUtility.getString(1, 0, " ManageProdduct");
 	String tag= ExcelUtility.getString(1, 1, " ManageProdduct");
 	String excptedAlert= ExcelUtility.getString(1, 2," ManageProdduct");
-	int weigthValue=5;
-	int maxWeight=10;
-	int pricevalue=500;
-	int stockValue=45;
+	String weigthValue= ExcelUtility.getString(1, 3," ManageProdduct");
+	String maxWeight= ExcelUtility.getString(1, 4," ManageProdduct");
+	String pricevalue= ExcelUtility.getString(1, 5," ManageProdduct");
+	String stockValue= ExcelUtility.getString(1, 6," ManageProdduct");
 	LoginPage loginpage=new LoginPage(driver);
 	ManageProductPage manageproductpage=new ManageProductPage(driver);
 	loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();

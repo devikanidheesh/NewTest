@@ -63,9 +63,9 @@ public class ManageDeliverBoyPage {
 				emailField.sendKeys(email);
 				return this;
 			}
-			public void enterThePhoneNumberToManAgeDeliverBoyPage(int phonNo) {
+			public void enterThePhoneNumberToManAgeDeliverBoyPage(String phonNo) {
 				
-				String phone=Integer.toString(phonNo);
+				String phone=String.valueOf(phonNo);
 				enterThePhoneNumber.sendKeys(phone);
 			}
 			public ManageDeliverBoyPage enterAddresstoManageDeliverBoyPage(String address){
@@ -80,18 +80,14 @@ public class ManageDeliverBoyPage {
 				paswordFieldDelBoy.sendKeys(pasworddelboy);
 				return this;
 			}
-			public String getSaveButtonText()
-			{
-				return saveButton.getText();
-				
-			}
+			
 			public void clickSavebutton()
 			{
 				PageUtility pageutility=new PageUtility();
 				WaitUtility waitutility=new WaitUtility();
-				pageutility.scrollByUsingJavascriptExecuter(driver, saveButton);
 				waitutility.fluentwaitelementtoBeClicked(driver,saveButton);
-				saveButton.click();
+				pageutility.clickusingjavascriptExecuter(driver, saveButton);
+			
 			}
 			public boolean getAlertSucessfulMessage()
 			{

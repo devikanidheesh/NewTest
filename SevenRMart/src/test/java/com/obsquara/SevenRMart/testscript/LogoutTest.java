@@ -14,8 +14,7 @@ public class LogoutTest extends Base{
 	String elementexcepctedLogout=ExcelUtility.getString(1, 0, "LogOutPage");
 	LoginPage loginpage=new LoginPage(driver);
 	LogoutPage logoutpage=new LogoutPage(driver);
-	loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
-	loginpage.verifyNavigateToDashBoardHomePage();
+	loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton().verifyNavigateToDashBoardHomePage();
 	logoutpage.AdminPage().clickOnLogoutButton().adminLogout();
 	String elementActualLogOut=logoutpage.verifyGettheloginpage();
 	assertEquals(elementexcepctedLogout,elementActualLogOut,"Unable to Admin logout ");

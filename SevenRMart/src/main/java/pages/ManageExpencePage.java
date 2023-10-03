@@ -93,9 +93,9 @@ public class ManageExpencePage {
 		expenseBankorCash.click();
 		return this;
 	}
-	public  ManageExpencePage entertheAmount(int amount)
+	public  ManageExpencePage entertheAmount(String amount)
 	{
-		String amountfield=Integer.toString(amount);
+		String amountfield=String.valueOf(amount);
 		enterAmount.sendKeys(amountfield);
 		return this;
 	}
@@ -121,6 +121,7 @@ public class ManageExpencePage {
 		
 		return alert.isDisplayed();
 	}
+	
 	
 	
 	

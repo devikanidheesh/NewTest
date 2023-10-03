@@ -96,9 +96,9 @@ public class ManageProductPage {
 			weightbutton.click();
 			return this;
 		}
-		public ManageProductPage enterTheWeightValueInWeightTest(int weigthValue) {
+		public ManageProductPage enterTheWeightValueInWeightTest(String weigthValue) {
 		
-			String weight=Integer.toString(weigthValue);
+			String weight=String.valueOf(weigthValue);
 					entertheweightvalue.sendKeys(weight);
 					return this;
 		}
@@ -113,18 +113,18 @@ public class ManageProductPage {
 			weightunit.click();
 			return this;
 		}
-		public ManageProductPage  maximumweightField(int maxWeight) {
-			String maximumWeight=Integer.toString(maxWeight);
+		public ManageProductPage  maximumweightField(String maxWeight) {
+			String maximumWeight=String.valueOf(maxWeight);
 			maximumWeightfield.sendKeys(maximumWeight);
 			return this;
 		}
-		public ManageProductPage enterThePriceField(int price) {
-			String pricevalue=Integer.toString(price);
+		public ManageProductPage enterThePriceField(String  price) {
+			String pricevalue=String.valueOf(price);
 			priceField.sendKeys(pricevalue);
 			return this;
 		}
-		public ManageProductPage enterTheStockAvailabilityField(int stock) {
-			String stockValue=Integer.toString(stock);
+		public ManageProductPage enterTheStockAvailabilityField(String stock) {
+			String stockValue=String.valueOf(stock);
 			stockAvailability.sendKeys(stockValue);
 			return this;
 		}

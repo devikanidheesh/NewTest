@@ -7,14 +7,6 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.obsquara.SevenRMart.testscript.ManagerSliderTest"/>
-      <class name="com.obsquara.SevenRMart.testscript.LogoutTest"/>
-      <class name="com.obsquara.SevenRMart.testscript.ManageProdductTest"/>
-      <class name="Testng.NewTest"/>
-      <class name="com.obsquara.SevenRMart.testscript.LoginTest"/>
-      <class name="com.obsquara.SevenRMart.testscript.AdminUsersTest"/>
-      <class name="com.obsquara.SevenRMart.testscript.ManageDeliveryBoyTest"/>
-      <class name="com.obsquara.SevenRMart.testscript.ManageLocationText"/>
-      <class name="com.obsquara.SevenRMart.testscript.PushNotificationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -31,9 +31,7 @@ public class LoginTest extends Base {
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
 		String exceptedAlert=ExcelUtility.getString(1, 5, "LoginPage");
 		loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(userName);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickSigninButton();
+		loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
 		String actualAlert=loginpage.verifyGetTheAlertMessage();
 		assertEquals(exceptedAlert,actualAlert,"Able to login with Wrong username and correct password");	
 		
@@ -48,9 +46,7 @@ public class LoginTest extends Base {
 		String password=ExcelUtility.getString(1, 3, "LoginPage");
 		String excpctedresult=ExcelUtility.getString(1, 5, "LoginPage");
 		loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(userName);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickSigninButton();
+		loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
 		String actualresult=loginpage.verifyGetTheAlertMessage();
 		assertEquals(excpctedresult,actualresult,"Able to login with correct username and wrong password ");
 	}
@@ -63,9 +59,7 @@ public class LoginTest extends Base {
 		String password=ExcelUtility.getString(1, 3, "LoginPage");
 		String excpctedresult=ExcelUtility.getString(1, 5, "LoginPage");
 		loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(userName);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickSigninButton();
+		loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
 		String actualresult=loginpage.verifyGetTheAlertMessage();
 		assertEquals(excpctedresult,actualresult,"Able to login with Wrong username and wrong password");
 	}

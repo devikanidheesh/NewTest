@@ -17,7 +17,7 @@ public class Liserners extends Base implements ITestListener {
 
 	ExtentTest test;
 
-	ExtentReports extent = ExtendReportUtility.extentReports;
+	ExtentReports extent = ExtendReportUtility.createExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 	public void onTestStart(ITestResult result) {
 

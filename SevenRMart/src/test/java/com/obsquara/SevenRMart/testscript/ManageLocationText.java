@@ -21,10 +21,8 @@ public class ManageLocationText extends Base {
 	LoginPage loginpage=new LoginPage(driver);
 	ManageLocationPage managelocationpage=new ManageLocationPage(driver);
 	loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
-	managelocationpage.clicktomanagelocation();
-	managelocationpage.getSearchButtonText();
-	managelocationpage.searchbuttonclickable().selectcountryid();
-	managelocationpage.getTextStateId();
+	managelocationpage.clicktomanagelocation().getSearchButtonText();
+	managelocationpage.searchbuttonclickable().selectcountryid().getTextStateId();
 	managelocationpage.selectStateId().enterTheLocationField(location);
 	managelocationpage.getSearchButtonTextafterDetails();
 	managelocationpage.clickableSearchButton();
