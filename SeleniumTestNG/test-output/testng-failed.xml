@@ -6,25 +6,83 @@
       <class name="com.obsquara.SeleniumTestNG.WebTable">
         <methods>
           <include name="driverCloseOrQuit"/>
+          <include name="identifyName"/>
           <include name="instilBrowser"/>
           <include name="tableList"/>
         </methods>
       </class> <!-- com.obsquara.SeleniumTestNG.WebTable -->
-      <class name="com.obsquara.SeleniumTestNG.SelectClass">
+      <class name="com.obsquara.SeleniumTestNG.PopUp">
         <methods>
           <include name="instilBrowser"/>
           <include name="driverCloseOrQuit"/>
-          <include name="sampleSelectClass"/>
+          <include name="popup"/>
         </methods>
-      </class> <!-- com.obsquara.SeleniumTestNG.SelectClass -->
+      </class> <!-- com.obsquara.SeleniumTestNG.PopUp -->
+      <class name="com.obsquara.SeleniumTestNG.Annotations">
+        <methods>
+          <include name="afterTest"/>
+          <include name="afterSuit"/>
+        </methods>
+      </class> <!-- com.obsquara.SeleniumTestNG.Annotations -->
+      <class name="com.obsquara.SeleniumTestNG.Assertion">
+        <methods>
+          <include name="instilBrowser"/>
+          <include name="driverCloseOrQuit"/>
+          <include name="assertFalsRadiobuttonDisable"/>
+          <include name="assertNullSample"/>
+          <include name="softAssert"/>
+          <include name="notEqualSample"/>
+          <include name="asserTrueRadioButtonM"/>
+          <include name="verifyShowButtontext"/>
+          <include name="assertNotNullSample"/>
+          <include name="assertsEqualsSingleinputform"/>
+        </methods>
+      </class> <!-- com.obsquara.SeleniumTestNG.Assertion -->
+      <class name="com.obsquara.SeleniumTestNG.Iframes">
+        <methods>
+          <include name="driverCloseOrQuit"/>
+          <include name="instilBrowser"/>
+          <include name="iframesample"/>
+        </methods>
+      </class> <!-- com.obsquara.SeleniumTestNG.Iframes -->
+      <class name="com.obsquara.SeleniumTestNG.JavaScriptExcuteSample">
+        <methods>
+          <include name="driverCloseOrQuit"/>
+          <include name="instilBrowser"/>
+          <include name="showmsg"/>
+        </methods>
+      </class> <!-- com.obsquara.SeleniumTestNG.JavaScriptExcuteSample -->
+      <class name="com.obsquara.SeleniumTestNG.AnnotationScenario">
+        <methods>
+          <include name="afterTest"/>
+          <include name="instilBrowser"/>
+          <include name="afterclass"/>
+          <include name="beforeTest"/>
+          <include name="beforeSuit"/>
+          <include name="afterSuit"/>
+          <include name="beforeClass"/>
+          <include name="testCase1"/>
+          <include name="driverQuit"/>
+        </methods>
+      </class> <!-- com.obsquara.SeleniumTestNG.AnnotationScenario -->
       <class name="com.obsquara.SeleniumTestNG.TestcasesObsquara">
         <methods>
           <include name="instilBrowser"/>
           <include name="driverCloseOrQuit"/>
           <include name="xpathTestcase"/>
           <include name="verifyShowButtonAlignment"/>
+          <include name="idButtonTestcase"/>
+          <include name="classAndId"/>
+          <include name="cssSelectorTestcase"/>
         </methods>
       </class> <!-- com.obsquara.SeleniumTestNG.TestcasesObsquara -->
+      <class name="com.obsquara.SeleniumTestNG.FindElementsSample">
+        <methods>
+          <include name="instilBrowser"/>
+          <include name="driverCloseOrQuit"/>
+          <include name="menuElements"/>
+        </methods>
+      </class> <!-- com.obsquara.SeleniumTestNG.FindElementsSample -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
