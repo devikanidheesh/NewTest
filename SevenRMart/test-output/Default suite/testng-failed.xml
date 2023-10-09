@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.obsquara.SevenRMart.testscript.LogoutTest">
+      <class name="com.obsquara.SevenRMart.testscript.CatagoryTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="verifyTheAdminLogout"/>
+          <include name="verifyAbleToDeleteTheItemInCateogryList"/>
           <include name="intializeBrowser"/>
         </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.LogoutTest -->
+      </class> <!-- com.obsquara.SevenRMart.testscript.CatagoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

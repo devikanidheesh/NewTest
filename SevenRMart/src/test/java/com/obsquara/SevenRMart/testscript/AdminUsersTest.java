@@ -16,11 +16,12 @@ import Utilities.PageUtility;
 import Utilities.WaitUtility;
 import pages.AdminUserspage;
 import pages.LoginPage;
+import retry.Retry;
 
 public class AdminUsersTest extends Base{
 
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void verifyUserCreatedSuccessfullyUserDetailsinAdminUserPage()
 	{
 		String userName=ExcelUtility.getString(1, 0, "LoginPage");

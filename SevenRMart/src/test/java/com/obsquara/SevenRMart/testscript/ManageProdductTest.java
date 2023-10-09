@@ -7,9 +7,10 @@ import org.testng.annotations.Test;
 import Utilities.ExcelUtility;
 import pages.LoginPage;
 import pages.ManageProductPage;
+import retry.Retry;
 
 public class ManageProdductTest extends Base {
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	
 	public void verifyUnableToaddNewIteminmanageproductpage() {
 	String userName=ExcelUtility.getString(1, 0, "LoginPage");

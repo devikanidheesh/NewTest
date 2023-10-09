@@ -8,34 +8,15 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">ParallelMethodTesting</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">10,298</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,458</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">ParallelMethodTesting</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.obsquara.SevenRMart.testscript.LoginTest</td><td><a href="#m0">verifyUserIsAbleToLoginWithCorrectUserNameAndPassword</a></td><td rowspan="1">1696472447279</td><td rowspan="1">142</td></tr><tr class="failedodd"><td rowspan="1">com.obsquara.SevenRMart.testscript.ManageProdductTest</td><td><a href="#m1">verifyUnableToaddNewIteminmanageproductpage</a></td><td rowspan="1">1696472447222</td><td rowspan="1">256</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.obsquara.SevenRMart.testscript.LoginTest</td><td><a href="#m0">verifyInvalidUserNameAndInvalidPassword</a></td><td rowspan="1">1696786647694</td><td rowspan="1">962</td></tr><tr class="passedeven"><td><a href="#m1">verifyUserIsAbleToLoginWithCorrectUserNameAndPassword</a></td><td rowspan="1">1696786650679</td><td rowspan="1">1127</td></tr><tr class="passedeven"><td><a href="#m2">verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword</a></td><td rowspan="1">1696786653893</td><td rowspan="1">946</td></tr><tr class="passedeven"><td><a href="#m3">verifycorrectUserNameandwrongPassword</a></td><td rowspan="1">1696786656886</td><td rowspan="1">904</td></tr><tr class="passedodd"><td rowspan="1">com.obsquara.SevenRMart.testscript.LogoutTest</td><td><a href="#m4">verifyTheAdminLogout</a></td><td rowspan="1">1696786660100</td><td rowspan="1">1648</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.obsquara.SevenRMart.testscript.LoginTest#verifyUserIsAbleToLoginWithCorrectUserNameAndPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:145)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:49)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:106)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at Utilities.ExcelUtility.getString(ExcelUtility.java:54)
-	at com.obsquara.SevenRMart.testscript.LoginTest.verifyUserIsAbleToLoginWithCorrectUserNameAndPassword(LoginTest.java:18)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0X82801A7F
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:260)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:141)
-	... 22 more
-... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.obsquara.SevenRMart.testscript.ManageProdductTest#verifyUnableToaddNewIteminmanageproductpage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)&quot; because &quot;Utilities.ExcelUtility.wb&quot; is null
-	at Utilities.ExcelUtility.getString(ExcelUtility.java:59)
-	at com.obsquara.SevenRMart.testscript.ManageProdductTest.verifyUnableToaddNewIteminmanageproductpage(ManageProdductTest.java:15)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.obsquara.SevenRMart.testscript.LoginTest#verifyInvalidUserNameAndInvalidPassword</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>User</td><td>User</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.obsquara.SevenRMart.testscript.LoginTest#verifyUserIsAbleToLoginWithCorrectUserNameAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.obsquara.SevenRMart.testscript.LoginTest#verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.obsquara.SevenRMart.testscript.LoginTest#verifycorrectUserNameandwrongPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.obsquara.SevenRMart.testscript.LogoutTest#verifyTheAdminLogout</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Remember Me</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

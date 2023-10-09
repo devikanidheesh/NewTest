@@ -6,6 +6,7 @@ import Utilities.ExcelUtility;
 import static org.testng.Assert.assertEquals;
 import pages.LoginPage;
 import pages.LogoutPage;
+import retry.Retry;
 
 public class LogoutTest extends Base{
 	@Test

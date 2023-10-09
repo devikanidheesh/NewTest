@@ -22,8 +22,8 @@ public class CategoryPage {
 	@FindBy(xpath="//i[contains(@class,'fas fa-arrow-circle-right')]//parent::a[@href='https://groceryapp.uniqassosiates.com/admin/list-category']")
 	private WebElement moreinfo;
 	@FindAll({@FindBy(xpath="//table[contains(@class,'table table-bordered table-hover table-sm')]//child::td")}) 
-	private List<WebElement>categoryListElement;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/category/delete?del=204&page_ad=1']")
+	List<WebElement>categoryListElement;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/category/delete?del=195&page_ad=1']")
 	private WebElement deleteKey;
 	@FindBy(xpath="//div[contains(@class,'alert alert-success alert-dismissible')]")
 	private WebElement alertMsg;
@@ -35,8 +35,9 @@ public class CategoryPage {
 		moreinfo.click();
 		return this;
 	}
-	public CategoryPage deleteTheParticularItem(String expectedListItem)
+	public boolean deleteTheParticularItem(String expectedListItem)
 	{
+		boolean flag= false;
 		for(WebElement item:categoryListElement)
 		{
 			String cateogaryItem=item.getText();
@@ -47,10 +48,11 @@ public class CategoryPage {
 				pageutility.clickusingjavascriptExecuter(driver, deleteKey);
 				waitutility.fluentWaitForVisibilityofallElement(driver, deleteKey);
 				pageutility.alertAccept(driver, deleteKey);
-			
+			flag=true;
+			break;
 			}
 		}
-		return this;
+		return flag;
 	}
 	public boolean AlertMessageIsDisplayed()
 	{

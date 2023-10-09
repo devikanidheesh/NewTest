@@ -7,16 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsquara.SevenRMart.testscript.LoginTest">
+      <class name="com.obsquara.SevenRMart.testscript.LogoutTest">
         <methods>
-          <include name="verifyInvalidUserNameAndInvalidPassword"/>
           <include name="browserQuit"/>
-          <include name="verifyUserIsAbleToLoginWithCorrectUserNameAndPassword"/>
-          <include name="verifycorrectUserNameandwrongPassword"/>
-          <include name="verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword"/>
+          <include name="verifyTheAdminLogout"/>
           <include name="intializeBrowser"/>
         </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.LoginTest -->
+      </class> <!-- com.obsquara.SevenRMart.testscript.LogoutTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

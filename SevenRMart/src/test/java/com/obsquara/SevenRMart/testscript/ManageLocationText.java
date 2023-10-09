@@ -7,9 +7,10 @@ import org.testng.annotations.Test;
 import Utilities.ExcelUtility;
 import pages.LoginPage;
 import pages.ManageLocationPage;
+import retry.Retry;
 
 public class ManageLocationText extends Base {
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void verifySearchthedetailsofmanagelocationpage()
 	{
 		

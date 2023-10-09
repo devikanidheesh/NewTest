@@ -6,9 +6,10 @@ import org.testng.annotations.Test;
 import Utilities.ExcelUtility;
 import pages.LoginPage;
 import pages.ManageDeliverBoyPage;
+import retry.Retry;
 
 public class ManageDeliveryBoyTest extends Base {
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void verifyAddDeliverBoyInformationinManageDeliveryBoyPage()
 	{
 		String userName=ExcelUtility.getString(1, 0, "LoginPage");

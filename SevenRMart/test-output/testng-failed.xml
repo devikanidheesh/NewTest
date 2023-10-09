@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="classes" name="Failed suite [ParallelMethodTesting]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="ListeneresforExtendReports.Liserners"/>
   </listeners>
-  <test thread-count="2" parallel="classes" name="Test(failed)">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsquara.SevenRMart.testscript.ManageProdductTest">
+      <class name="com.obsquara.SevenRMart.testscript.LogoutTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="verifyUnableToaddNewIteminmanageproductpage"/>
+          <include name="verifyTheAdminLogout"/>
           <include name="intializeBrowser"/>
         </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.ManageProdductTest -->
-      <class name="com.obsquara.SevenRMart.testscript.LoginTest">
-        <methods>
-          <include name="verifyUserIsAbleToLoginWithCorrectUserNameAndPassword"/>
-          <include name="browserQuit"/>
-          <include name="intializeBrowser"/>
-        </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.LoginTest -->
+      </class> <!-- com.obsquara.SevenRMart.testscript.LogoutTest -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [ParallelMethodTesting] -->
+</suite> <!-- Failed suite [Suite] -->

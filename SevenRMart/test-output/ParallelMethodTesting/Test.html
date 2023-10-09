@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Oct 05 07:50:38 IST 2023</td>
+<td>Started on:</td><td>Thu Oct 05 08:05:21 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10298 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34451 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,93 +67,38 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.obsquara.SevenRMart.testscript.ManageProdductTest.verifyUnableToaddNewIteminmanageproductpage()'><b>verifyUnableToaddNewIteminmanageproductpage</b><br>Test class: com.obsquara.SevenRMart.testscript.ManageProdductTest</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)&quot; because &quot;Utilities.ExcelUtility.wb&quot; is null
-	at Utilities.ExcelUtility.getString(ExcelUtility.java:59)
-	at com.obsquara.SevenRMart.testscript.ManageProdductTest.verifyUnableToaddNewIteminmanageproductpage(ManageProdductTest.java:15)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace248060745", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace248060745'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(String)&quot; because &quot;Utilities.ExcelUtility.wb&quot; is null
-	at Utilities.ExcelUtility.getString(ExcelUtility.java:59)
-	at com.obsquara.SevenRMart.testscript.ManageProdductTest.verifyUnableToaddNewIteminmanageproductpage(ManageProdductTest.java:15)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre></div></td>
-<td>0</td>
-<td>com.obsquara.SevenRMart.testscript.ManageProdductTest@6f36c2f0</td></tr>
+<td title='com.obsquara.SevenRMart.testscript.LoginTest.verifycorrectUserNameandwrongPassword()'><b>verifycorrectUserNameandwrongPassword</b><br>Test class: com.obsquara.SevenRMart.testscript.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsquara.SevenRMart.testscript.LoginTest@5c86a017</td></tr>
 <tr>
 <td title='com.obsquara.SevenRMart.testscript.LoginTest.verifyUserIsAbleToLoginWithCorrectUserNameAndPassword()'><b>verifyUserIsAbleToLoginWithCorrectUserNameAndPassword</b><br>Test class: com.obsquara.SevenRMart.testscript.LoginTest</td>
-<td><div><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:145)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:49)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:106)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at Utilities.ExcelUtility.getString(ExcelUtility.java:54)
-	at com.obsquara.SevenRMart.testscript.LoginTest.verifyUserIsAbleToLoginWithCorrectUserNameAndPassword(LoginTest.java:18)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0X82801A7F
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:260)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:141)
-	... 22 more
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1441669523", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1441669523'><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:145)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:49)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:106)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at Utilities.ExcelUtility.getString(ExcelUtility.java:54)
-	at com.obsquara.SevenRMart.testscript.LoginTest.verifyUserIsAbleToLoginWithCorrectUserNameAndPassword(LoginTest.java:18)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0X82801A7F
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:260)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:141)
-	... 22 more
-</pre></div></td>
-<td>0</td>
-<td>com.obsquara.SevenRMart.testscript.LoginTest@1807f5a7</td></tr>
+<td></td>
+<td>2</td>
+<td>com.obsquara.SevenRMart.testscript.LoginTest@5c86a017</td></tr>
+<tr>
+<td title='com.obsquara.SevenRMart.testscript.LoginTest.verifyInvalidUserNameAndInvalidPassword()'><b>verifyInvalidUserNameAndInvalidPassword</b><br>Test class: com.obsquara.SevenRMart.testscript.LoginTest</td>
+<td></td>
+<td>6</td>
+<td>com.obsquara.SevenRMart.testscript.LoginTest@5c86a017</td></tr>
+<tr>
+<td title='com.obsquara.SevenRMart.testscript.ManageProdductTest.verifyUnableToaddNewIteminmanageproductpage()'><b>verifyUnableToaddNewIteminmanageproductpage</b><br>Test class: com.obsquara.SevenRMart.testscript.ManageProdductTest</td>
+<td></td>
+<td>13</td>
+<td>com.obsquara.SevenRMart.testscript.ManageProdductTest@49c90a9c</td></tr>
+<tr>
+<td title='com.obsquara.SevenRMart.testscript.LoginTest.verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword()'><b>verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword</b><br>Test class: com.obsquara.SevenRMart.testscript.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>com.obsquara.SevenRMart.testscript.LoginTest@5c86a017</td></tr>
 </table><p>
 </body>
 </html>
