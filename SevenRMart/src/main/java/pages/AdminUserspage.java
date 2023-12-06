@@ -12,7 +12,7 @@ import Utilities.WaitUtility;
 
 public class AdminUserspage {
 	public WebDriver driver;
-	public AdminUserspage(WebDriver driver){
+		public AdminUserspage(WebDriver driver){
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}

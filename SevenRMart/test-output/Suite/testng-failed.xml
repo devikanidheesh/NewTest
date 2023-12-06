@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.obsquara.SevenRMart.testscript.LogoutTest">
+      <class name="com.obsquara.SevenRMart.testscript.PushNotificationTest">
         <methods>
           <include name="browserQuit"/>
-          <include name="verifyTheAdminLogout"/>
           <include name="intializeBrowser"/>
+          <include name="sendThePushNotificationInformation"/>
         </methods>
-      </class> <!-- com.obsquara.SevenRMart.testscript.LogoutTest -->
+      </class> <!-- com.obsquara.SevenRMart.testscript.PushNotificationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

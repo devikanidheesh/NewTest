@@ -1,172 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-08T23:07:22 IST" name="Suite" finished-at="2023-10-08T23:07:41 IST" duration-ms="19458">
+  <suite started-at="2023-12-06T12:02:37 IST" name="Default suite" finished-at="2023-12-06T12:02:37 IST" duration-ms="47">
     <groups>
-      <group name="regression">
-        <method signature="LoginTest.verifyUserIsAbleToLoginWithCorrectUserNameAndPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" name="verifyUserIsAbleToLoginWithCorrectUserNameAndPassword" class="com.obsquara.SevenRMart.testscript.LoginTest"/>
-        <method signature="LoginTest.verifycorrectUserNameandwrongPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" name="verifycorrectUserNameandwrongPassword" class="com.obsquara.SevenRMart.testscript.LoginTest"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="LoginTest.verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" name="verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword" class="com.obsquara.SevenRMart.testscript.LoginTest"/>
-        <method signature="LoginTest.verifycorrectUserNameandwrongPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" name="verifycorrectUserNameandwrongPassword" class="com.obsquara.SevenRMart.testscript.LoginTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test started-at="2023-10-08T23:07:22 IST" name="Test" finished-at="2023-10-08T23:07:41 IST" duration-ms="19458">
-      <class name="com.obsquara.SevenRMart.testscript.LoginTest">
-        <test-method is-config="true" signature="intializeBrowser(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:23 IST" name="intializeBrowser" finished-at="2023-10-08T23:07:27 IST" duration-ms="3976" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyInvalidUserNameAndInvalidPassword(java.lang.String,java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:27 IST" name="verifyInvalidUserNameAndInvalidPassword" data-provider="LoginProvider" finished-at="2023-10-08T23:07:28 IST" duration-ms="962" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[User]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[User]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyInvalidUserNameAndInvalidPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:28 IST" name="browserQuit" finished-at="2023-10-08T23:07:28 IST" duration-ms="263" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyInvalidUserNameAndInvalidPassword status=SUCCESS method=LoginTest.verifyInvalidUserNameAndInvalidPassword(java.lang.String,java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="intializeBrowser(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:28 IST" name="intializeBrowser" finished-at="2023-10-08T23:07:30 IST" duration-ms="1752" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserIsAbleToLoginWithCorrectUserNameAndPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:30 IST" name="verifyUserIsAbleToLoginWithCorrectUserNameAndPassword" finished-at="2023-10-08T23:07:31 IST" duration-ms="1127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToLoginWithCorrectUserNameAndPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:31 IST" name="browserQuit" finished-at="2023-10-08T23:07:32 IST" duration-ms="375" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToLoginWithCorrectUserNameAndPassword status=SUCCESS method=LoginTest.verifyUserIsAbleToLoginWithCorrectUserNameAndPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="intializeBrowser(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:32 IST" name="intializeBrowser" finished-at="2023-10-08T23:07:33 IST" duration-ms="1708" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:33 IST" name="verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword" finished-at="2023-10-08T23:07:34 IST" duration-ms="946" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:34 IST" name="browserQuit" finished-at="2023-10-08T23:07:35 IST" duration-ms="246" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword status=SUCCESS method=LoginTest.verifyUserIsUnableTOLoginWithWrongUserNameAndCorrectPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="intializeBrowser(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:35 IST" name="intializeBrowser" finished-at="2023-10-08T23:07:36 IST" duration-ms="1799" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifycorrectUserNameandwrongPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:36 IST" name="verifycorrectUserNameandwrongPassword" finished-at="2023-10-08T23:07:37 IST" duration-ms="904" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifycorrectUserNameandwrongPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39]" started-at="2023-10-08T23:07:37 IST" name="browserQuit" finished-at="2023-10-08T23:07:38 IST" duration-ms="265" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifycorrectUserNameandwrongPassword status=SUCCESS method=LoginTest.verifycorrectUserNameandwrongPassword()[pri:0, instance:com.obsquara.SevenRMart.testscript.LoginTest@14dd7b39] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- com.obsquara.SevenRMart.testscript.LoginTest -->
+    <test started-at="2023-12-06T12:02:37 IST" name="Default test" finished-at="2023-12-06T12:02:37 IST" duration-ms="47">
       <class name="com.obsquara.SevenRMart.testscript.LogoutTest">
-        <test-method is-config="true" signature="intializeBrowser(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LogoutTest@311bf055]" started-at="2023-10-08T23:07:38 IST" name="intializeBrowser" finished-at="2023-10-08T23:07:40 IST" duration-ms="2040" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyTheAdminLogout(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LogoutTest@311bf055]" started-at="2023-10-08T23:07:40 IST" name="verifyTheAdminLogout" finished-at="2023-10-08T23:07:41 IST" duration-ms="1648" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Remember Me]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="verifyTheAdminLogout(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LogoutTest@14cd1699]" started-at="2023-12-06T12:02:37 IST" name="verifyTheAdminLogout" finished-at="2023-12-06T12:02:37 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [verifyTheAdminLogout] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [verifyTheAdminLogout] with [class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
+at org.testng.internal.Parameters.createParameters(Parameters.java:669)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:856)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:704)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:70)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:49)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:904)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTheAdminLogout -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.obsquara.SevenRMart.testscript.LogoutTest@311bf055]" started-at="2023-10-08T23:07:41 IST" name="browserQuit" finished-at="2023-10-08T23:07:41 IST" duration-ms="244" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTheAdminLogout status=SUCCESS method=LogoutTest.verifyTheAdminLogout(java.lang.String)[pri:0, instance:com.obsquara.SevenRMart.testscript.LogoutTest@311bf055] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
       </class> <!-- com.obsquara.SevenRMart.testscript.LogoutTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

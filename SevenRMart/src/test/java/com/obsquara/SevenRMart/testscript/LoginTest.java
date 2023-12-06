@@ -21,7 +21,7 @@ public class LoginTest extends Base {
 		String password=ExcelUtility.getString(1, 1, "LoginPage");
 		String excpctedLogin=ExcelUtility.getString(1, 4, "LoginPage");
 		loginpage=new LoginPage(driver);
-		loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
+	loginpage.enterUsernameOnUserNameField(userName).enterPasswordOnPasswordField(password).clickSigninButton();
 		String actualLogin=loginpage.verifyNavigateToDashBoardHomePage();
 		assertEquals(excpctedLogin,actualLogin,"Unable to login with correct UserName and Password");
 		

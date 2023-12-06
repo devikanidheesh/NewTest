@@ -7,9 +7,7 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes> 
-<class name="com.obsquara.SevenRMart.testscript.LoginTest"/>
-<class name="com.obsquara.SevenRMart.testscript.LogoutTest">
-<parameter name="elementexcepctedLogout" value="Remember Me"></parameter>
+<class name="com.obsquara.SevenRMart.testscript.PushNotificationTest">
 </class>
  	 </classes>
   </test> <!-- Test -->

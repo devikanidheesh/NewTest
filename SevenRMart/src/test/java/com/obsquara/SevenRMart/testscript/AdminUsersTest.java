@@ -21,7 +21,7 @@ import retry.Retry;
 public class AdminUsersTest extends Base{
 
 
-	@Test(retryAnalyzer = Retry.class)
+	@Test(retryAnalyzer = Retry.class, description="verify user is able to create an admin user")
 	public void verifyUserCreatedSuccessfullyUserDetailsinAdminUserPage()
 	{
 		String userName=ExcelUtility.getString(1, 0, "LoginPage");
